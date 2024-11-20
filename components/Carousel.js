@@ -19,9 +19,7 @@ export default function Carousel() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   useEffect(() => {
@@ -33,34 +31,17 @@ export default function Carousel() {
 
   return (
     <div className={styles.carousel}>
-      <div className={styles.carouselInner}>
-        <div className={styles.carouselImageWrapper}>
-          <img
-            src={images[currentIndex]}
-            alt={`Slide ${currentIndex}`}
-            className={styles.carouselItem}
-          />
-        </div>
-        <div className={styles.carouselControls}>
-          <button className={styles.leftArrow} onClick={prevSlide}>
-            &#10094;
-          </button>
-          <button className={styles.rightArrow} onClick={nextSlide}>
-            &#10095;
-          </button>
-        </div>
-        <div className={styles.carouselIndicators}>
-          {images.map((_, index) => (
-            <span
-              key={index}
-              className={`${styles.carouselIndicator} ${
-                index === currentIndex ? styles.active : ''
-              }`}
-              onClick={() => setCurrentIndex(index)}
-            ></span>
-          ))}
-        </div>
-      </div>
+      <img
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex}`}
+        className={styles.carouselItem}
+      />
+      <button className={styles.leftArrow} onClick={prevSlide}>
+        &#10094;
+      </button>
+      <button className={styles.rightArrow} onClick={nextSlide}>
+        &#10095;
+      </button>
     </div>
   );
 }
