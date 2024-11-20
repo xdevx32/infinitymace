@@ -1,0 +1,152 @@
+/* styles/StickyBanner.module.css */
+
+.stickyBanner {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #7bffb3);
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text {
+    margin: 0;
+    animation: textBlink 1.5s infinite;
+  }
+  
+  @keyframes textBlink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  /* styles/StickyBanner.module.css */
+
+.stickyBanner {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #7bffb3);
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .text {
+    margin: 0;
+    margin-bottom: 10px;
+    animation: textBlink 1.5s infinite;
+  }
+  
+  .videoContainer {
+    width: 400px; /* Adjust width as needed */
+    height: 225px; /* Maintain a 16:9 aspect ratio */
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes textBlink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .videoContainer {
+      width: 300px;
+      height: 169px; /* Maintain 16:9 aspect ratio */
+    }
+  
+    .text {
+      font-size: 1rem;
+    }
+  }
+  /* styles/StickyBanner.module.css */
+
+.stickyBanner {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #7bffb3);
+    background-size: cover;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .text {
+    margin: 0;
+    margin-bottom: 20px;
+    animation: textBlink 1.5s infinite;
+  }
+  
+  .videoContainer {
+    width: 80%; /* Make the video take 80% of the banner's width */
+    height: 45vw; /* Maintain a 16:9 aspect ratio */
+    max-width: 800px; /* Restrict the maximum width */
+    max-height: 450px; /* Restrict the maximum height */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes textBlink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .videoContainer {
+      width: 90%;
+      height: 50vw;
+    }
+  
+    .text {
+      font-size: 1rem;
+    }
+  }
+  

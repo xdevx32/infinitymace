@@ -5,13 +5,14 @@ import Header from '../components/Header';
 import FeaturedVideos from '../components/FeaturedVideos';
 import PhotoGallery from '../components/PhotoGallery';
 import BannerSlider from '../components/BannerSlider';
-import InstagramEmbed from '../components/InstagramEmbed';
+import StickyBanner from '../components/StickyBanner';
 
 const Carousel = dynamic(() => import('../components/Carousel'), { ssr: false });
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <StickyBanner />
       <Header />
       <BannerSlider />
       <Carousel />
