@@ -21,7 +21,9 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <img
-          src="https://i.ibb.co/yPYgXW0/toony-logo-second.jpg"
+        width={90}
+        height={90}
+          src="https://i.ibb.co/YPPfXW3/maces-logo-transparent.png"
           alt="Infinity Mace Logo"
           className={styles.logo}
         />
