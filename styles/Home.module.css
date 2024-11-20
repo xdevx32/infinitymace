@@ -1,0 +1,541 @@
+/* styles/Home.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carouselInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.leftArrow,
+.rightArrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.leftArrow {
+  left: 20px;
+}
+
+.rightArrow {
+  right: 20px;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.carouselIndicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carouselIndicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.section {
+  margin: 30px 0;
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.videoGallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoWrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.image:hover::after {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 300px;
+  }
+}
+/* styles/Home.module.css */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 420px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carouselInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.leftArrow,
+.rightArrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.leftArrow {
+  left: 20px;
+}
+
+.rightArrow {
+  right: 20px;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.carouselIndicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carouselIndicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+/* styles/Home.module.css */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 420px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.carouselInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Background for images that don't fill the area */
+}
+
+.carouselItem {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Squishes the image while keeping the aspect ratio */
+  background-color: white; /* White background if image doesn't cover area */
+}
+
+.leftArrow,
+.rightArrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.leftArrow {
+  left: 20px;
+}
+
+.rightArrow {
+  right: 20px;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.carouselIndicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carouselIndicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+/* styles/Home.module.css */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 420px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for a polished look */
+}
+
+.carouselInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* White background for better aesthetics */
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.carouselItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without overflow */
+  border-radius: 20px;
+}
+
+.leftArrow,
+.rightArrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.leftArrow {
+  left: 20px;
+}
+
+.rightArrow {
+  right: 20px;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.carouselIndicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselIndicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+/* styles/Home.module.css */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 420px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carouselInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.carouselItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.carouselControls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.leftArrow,
+.rightArrow {
+  cursor: pointer;
+  padding: 12px 20px;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 5px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.carouselIndicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselIndicator.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
