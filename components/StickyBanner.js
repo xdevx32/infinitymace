@@ -1,5 +1,5 @@
 // components/StickyBanner.js
-import React from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styles from '../styles/StickyBanner.module.css';
 
@@ -7,23 +7,27 @@ import styles from '../styles/StickyBanner.module.css';
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 export default function StickyBanner() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null;
+
   return (
     <div className={styles.stickyBanner}>
-      <div className={styles.content}>
-        <p className={styles.text}>
-          🚀 Welcome to Infinity Mace! Unlock your potential today! 🚀
-        </p>
-        <div className={styles.videoContainer}>
-          <ReactPlayer
-            url="https://youtu.be/mcJNm45dChM"
-            playing
-            muted
-            loop
-            width="100%"
-            height="100%"
-          />
-        </div>
-      </div>
+      <button
+        className={styles.hideButton}
+        onClick={() => setIsVisible(false)}
+      >
+        ✖
+      </button>
+      <ReactPlayer
+        url="https://youtu.be/mcJNm45dChM"
+        playing
+        muted
+        loop
+        width="100%"
+        height="100%"
+        className={styles.videoPlayer}
+      />
     </div>
   );
 }
